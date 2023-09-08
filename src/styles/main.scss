@@ -1,66 +1,5 @@
-@font-face {
-  font-family: "Dacia Block";
-  src: url(https://cdn.group.renault.com/fonts/dacia/DaciaBlock-Regular.eot)
-      format("eot"),
-    url(https://cdn.group.renault.com/fonts/dacia/DaciaBlock-Regular.woff2)
-      format("woff2"),
-    url(https://cdn.group.renault.com/fonts/dacia/DaciaBlock-Regular.woff)
-      format("woff"),
-    url(https://cdn.group.renault.com/fonts/dacia/DaciaBlock-Regular.ttf)
-      format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Dacia Block";
-  src: url(https://cdn.group.renault.com/fonts/dacia/DaciaBlock-Bold.eot)
-      format("eot"),
-    url(https://cdn.group.renault.com/fonts/dacia/DaciaBlock-Bold.woff2)
-      format("woff2"),
-    url(https://cdn.group.renault.com/fonts/dacia/DaciaBlock-Bold.woff)
-      format("woff"),
-    url(https://cdn.group.renault.com/fonts/dacia/DaciaBlock-Bold.ttf)
-      format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Read";
-  src: url(https://cdn.group.renault.com/fonts/dacia/Read-Regular_V1100.eot)
-      format("eot"),
-    url(https://cdn.group.renault.com/fonts/dacia/Read-Regular_V1100.woff2)
-      format("woff2"),
-    url(https://cdn.group.renault.com/fonts/dacia/Read-Regular_V1100.woff)
-      format("woff"),
-    url(https://cdn.group.renault.com/fonts/dacia/Read-Regular_V1100.ttf)
-      format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Read";
-  src: url(https://cdn.group.renault.com/fonts/dacia/Read-Bold_V1100.eot)
-      format("eot"),
-    url(https://cdn.group.renault.com/fonts/dacia/Read-Bold_V1100.woff2)
-      format("woff2"),
-    url(https://cdn.group.renault.com/fonts/dacia/Read-Bold_V1100.woff)
-      format("woff"),
-    url(https://cdn.group.renault.com/fonts/dacia/Read-Bold_V1100.ttf)
-      format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-$font-dacia: "Dacia Block", sans-serif;
-$font-read: "Read", sans-serif;
-
-$green: #646b52;
-$orange: #ff671b;
-$black: #000000;
-$dark: #333333;
-$grey: #777777;
-$light-grey: #cccccc;
-$beige: #f2f2f2;
-$white: #ffffff;
+@import "./fonts.scss";
+@import "./variables.scss";
 
 body {
   max-width: 640px;
@@ -79,6 +18,7 @@ a {
   margin-bottom: 31px;
   display: block;
 }
+
 .link-primary {
   color: $white;
   font-family: $font-read;
@@ -90,15 +30,14 @@ a {
   cursor: pointer;
 }
 .link-secondary {
-  color: $black;
+  color: $green;
   font-family: $font-dacia;
   font-weight: 700;
   background: white;
-  border: 2px solid $black;
+  border: 2px solid $green;
   text-transform: uppercase;
   font-size: 11px;
   padding: 13px 87px;
-
   cursor: pointer;
 }
 .section {
@@ -125,6 +64,9 @@ a {
     color: $black;
     line-height: 20px;
   }
+  &__copy {
+    font-weight: 700;
+  }
   &__btn {
     margin-top: 29px;
     margin-bottom: 13px;
@@ -133,17 +75,24 @@ a {
 .content {
   margin-top: 42px;
 
+  &__img {
+    display: block;
+  }
+
   &__catalog-flex {
     display: flex;
     justify-content: space-between;
-
-    text-align: center;
   }
   &__picture {
     height: 275px;
     width: 320px;
   }
   &__section {
+    text-align: left;
+    padding-left: 0.5rem;
+  }
+  &__subtitle {
+    padding: 5px 5px;
   }
   &__box {
     text-transform: uppercase;
@@ -152,5 +101,175 @@ a {
   &__btn {
     margin-top: 29px;
     margin-bottom: 13px;
+  }
+  &__bg {
+    background-color: $beige;
+  }
+}
+
+.inner {
+  background: $green;
+  height: 145px;
+  color: $white;
+  font-family: $font-read;
+  margin-top: 30px;
+  padding: 15px 20px;
+  &__cover-flex {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  &__adv {
+    max-width: 232px;
+  }
+  &__title1 {
+    text-transform: uppercase;
+    font-family: $font-dacia;
+  }
+  &__offer {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  &__price {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  &__item {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  &__link-btn {
+    padding: 16px 57px;
+  }
+}
+
+.notes {
+  margin-top: 30px;
+  background-color: $green;
+  color: $white;
+  font-family: $font-read;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+  font-size: 18px;
+  padding: 9px 18px;
+  &__timer-1 {
+    width: 63px;
+    height: 63px;
+  }
+  &__button-next {
+    padding-bottom: 0px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.contact {
+  background-color: $beige;
+  margin-top: 40px;
+  height: 233px;
+  &__title {
+    font-family: $font-dacia;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: normal;
+    color: $green;
+    font-size: 29px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 27px;
+  }
+  &__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 176px;
+    font-family: $font-dacia;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 0;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    max-width: 20px;
+    &:nth-child(1) {
+      padding-top: 14px;
+      text-align: center;
+    }
+
+    &:nth-child(3) {
+      padding-top: 15px;
+      text-align: center;
+    }
+  }
+}
+.advice {
+  background-color: $grey;
+  color: $white;
+  font-family: $font-read;
+  font-size: 17px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.promo {
+  background-color: $green;
+
+  &__title {
+    color: $white;
+    text-transform: uppercase;
+    font-family: $font-dacia;
+    display: flex;
+    justify-content: center;
+    padding-top: 36px;
+    padding-bottom: 3px;
+  }
+  &__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 28px;
+    gap: 28px;
+    padding-left: 0;
+  }
+}
+.page {
+  background-color: $beige;
+  padding-top: 30px;
+  padding-left: 30px;
+  height: 825px;
+
+  &__about {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 35px;
+  }
+  &__lead {
+    font-family: $font-read;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  &__text {
+    font-family: $font-read;
+    font-size: 12px;
+    color: $black;
+  }
+  &__links {
+    text-decoration: underline;
+    color: $black;
+  }
+  &__tagline {
+    font-weight: 700;
   }
 }
