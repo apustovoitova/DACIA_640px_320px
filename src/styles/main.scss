@@ -1,16 +1,28 @@
 @import "./fonts.scss";
 @import "./variables.scss";
 
-body {
-  max-width: 640px;
+.body {
   margin: 0 auto;
 }
+
 a {
   text-decoration: none;
 }
 
 .main {
   width: 640px;
+  max-width: 640px;
+  &__picture-header {
+    background-image: url(../images/KV_SringExtreme_Desk_FR.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 320px;
+    @media (max-width: $r_mob_320) {
+      background-image: url(../images/KV_SringExtreme_Mob_FR.gif);
+      height: 640px;
+    }
+  }
   &__wrapper {
     max-width: 100%;
   }
@@ -23,18 +35,61 @@ a {
     justify-content: space-between;
     background-color: $beige;
     margin-bottom: 32px;
+    height: 280px;
+    @media (max-width: $r_mob_320) {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0px;
+      height: 1135px;
+    }
   }
+
   &__bg {
     height: 285px;
     max-width: 100%;
+    @media (max-width: $r_mob_320) {
+      height: 515px;
+    }
+  }
+
+  &__img_01 {
+    background-image: url(../images/im-usp-1_2.jpg);
+    width: 100%;
+    height: 560px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media (max-width: $r_mob_320) {
+      background-image: url(../images/im-usp-1_2.jpg);
+      padding-top: 15px;
+      height: 560px;
+    }
+  }
+  &__img_02 {
+    background-image: url(../images/im-usp-2_2.jpg);
+    width: 100%;
+    height: 560px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media (max-width: $r_mob_320) {
+      background-image: url(../images/im-usp-2_2.jpg);
+      height: 560px;
+    }
   }
   &__picture {
     height: 275px;
     width: 50%;
+    @media (max-width: $r_mob_320) {
+      height: 570px;
+      width: 100%;
+      margin-bottom: 13px;
+    }
   }
 
   &__section {
     padding-left: 32px;
+    @media (max-width: $r_mob_320) {
+      padding-bottom: 85px;
+    }
   }
 
   &__subtitle {
@@ -42,11 +97,19 @@ a {
     margin-bottom: 0;
     margin-right: 35px;
     font-size: 22px;
+    @media (max-width: $r_mob_320) {
+      font-size: 41px;
+      letter-spacing: 3px;
+      margin-top: 25px;
+    }
   }
 
   &__description {
     padding-left: 5px;
     padding-right: 5px;
+    @media (max-width: $r_mob_320) {
+      padding-top: 15px;
+    }
   }
   &__box {
     text-transform: uppercase;
@@ -55,6 +118,9 @@ a {
   &__btn {
     padding-top: 28px;
     padding-left: 21px;
+    @media (max-width: $r_mob_320) {
+      padding-top: 50px;
+    }
   }
 
   &__holder {
@@ -63,14 +129,24 @@ a {
   &__btn_01 {
     padding-top: 28px;
     padding-left: 21px;
+    @media (max-width: $r_mob_320) {
+      margin-left: 15px;
+    }
   }
   &__btn_02 {
     padding-top: 49px;
     padding-left: 12px;
+    @media (max-width: $r_mob_320) {
+      margin-left: 35px;
+      margin-top: 50px;
+    }
   }
   &__btn_03 {
     padding-top: 17px;
     padding-left: 19px;
+    @media (max-width: $r_mob_320) {
+      margin-left: 21px;
+    }
   }
 }
 .header {
@@ -81,6 +157,11 @@ a {
   margin-top: 19px;
   margin-bottom: 31px;
   display: block;
+  @media (max-width: $r_mob_320) {
+    width: 400px;
+    height: 44px;
+    margin-bottom: 55px;
+  }
 }
 
 .link-primary {
@@ -92,10 +173,15 @@ a {
   padding: 15px 28px;
   border: none;
   cursor: pointer;
+  @media (max-width: $r_mob_320) {
+    font-size: 25px;
+    padding: 30px 68px;
+    margin: 19px;
+  }
 }
 .link-secondary {
   color: $green;
-  font-family: $font-dacia;
+  font-family: $font-read;
   font-weight: 700;
   background: white;
   border: 2px solid $green;
@@ -103,12 +189,21 @@ a {
   font-size: 11px;
   padding: 15px 87px;
   cursor: pointer;
+  @media (max-width: $r_mob_320) {
+    font-size: 23px;
+    padding: 30px 171px;
+  }
 }
 .section {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-bottom: 50px;
+  @media (max-width: $r_mob_320) {
+    max-width: 539px;
+    padding-left: 55px;
+    margin-bottom: 92px;
+  }
 
   &__box {
     font-family: $font-dacia;
@@ -117,9 +212,17 @@ a {
     text-transform: uppercase;
     margin-top: 5px;
     padding-left: 0;
+    @media (max-width: $r_mob_320) {
+      font-size: 24px;
+      min-width: 100px;
+      padding-bottom: 0;
+    }
   }
   &__title1 {
     color: $black;
+    @media (max-width: $r_mob_320) {
+      margin-bottom: 0;
+    }
   }
   &__title2 {
     color: $green;
@@ -129,6 +232,11 @@ a {
     font-size: 16px;
     color: $black;
     line-height: 20px;
+    @media (max-width: $r_mob_320) {
+      font-size: 32px;
+      line-height: 42px;
+      padding-bottom: 40px;
+    }
   }
   &__copy {
     font-weight: 700;
@@ -139,6 +247,10 @@ a {
   }
   &__link-second {
     padding: 15px 70px;
+    @media (max-width: $r_mob_320) {
+      font-size: 29px;
+      padding: 26px 130px;
+    }
   }
 }
 
@@ -150,35 +262,73 @@ a {
   margin-top: 34px;
   padding: 15px 20px;
   margin-bottom: 45px;
+  @media (max-width: $r_mob_320) {
+    height: 526px;
+    margin-top: 43px;
+    margin-bottom: 64px;
+  }
   &__cover-flex {
     display: flex;
     justify-content: center;
     text-align: center;
     gap: 94px;
+    @media (max-width: $r_mob_320) {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
   }
   &__adv {
     max-width: 232px;
     padding-top: 5px;
+    @media (max-width: $r_mob_320) {
+      max-width: 591px;
+    }
   }
   &__title1 {
     text-transform: uppercase;
     font-family: $font-dacia;
+    @media (max-width: $r_mob_320) {
+      font-size: 44px;
+      margin-top: 26px;
+      margin-left: 15px;
+      margin-bottom: 55px;
+    }
   }
   &__offer {
     font-size: 18px;
     line-height: 20px;
+    @media (max-width: $r_mob_320) {
+      font-size: 37px;
+      margin-top: 26px;
+      margin-left: 15px;
+      margin-bottom: 0;
+    }
   }
   &__price {
     font-size: 32px;
     font-weight: 700;
+    @media (max-width: $r_mob_320) {
+      font-size: 58px;
+    }
   }
   &__item {
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 36px;
+    @media (max-width: $r_mob_320) {
+      font-size: 30px;
+      margin-top: 22px;
+      margin-bottom: 71px;
+    }
   }
   &__link-btn {
     padding: 18px 38px;
+    @media (max-width: $r_mob_320) {
+      font-size: 23px;
+      padding: 30px 67px;
+    }
   }
 }
 
@@ -190,12 +340,29 @@ a {
   display: flex;
   justify-content: space-between;
   text-align: center;
-
   font-size: 18px;
   padding: 9px 18px;
+  @media (max-width: $r_mob_320) {
+    height: 494px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__beige {
+    @media (max-width: $r_mob_320) {
+      height: 1212px;
+    }
+  }
   &__timer-1 {
     width: 63px;
     height: 63px;
+    @media (max-width: $r_mob_320) {
+      width: 126px;
+      height: 125px;
+      margin: 0 auto;
+    }
   }
   &__button-next {
     margin-top: 10px;
@@ -203,6 +370,20 @@ a {
     padding-bottom: 0px;
     width: 45px;
     height: 45px;
+    @media (max-width: $r_mob_320) {
+      width: 83px;
+      height: 83px;
+      margin: 0 auto;
+    }
+  }
+  &__heading {
+    text-transform: uppercase;
+    @media (max-width: $r_mob_320) {
+      font-size: 35px;
+    }
+  }
+  &__heading-bold {
+    font-weight: 700;
   }
 }
 
@@ -210,6 +391,10 @@ a {
   background-color: $beige;
   margin-top: 40px;
   height: 233px;
+  @media (max-width: $r_mob_320) {
+    height: 1098px;
+  }
+
   &__title {
     font-family: $font-dacia;
     font-weight: bold;
@@ -221,6 +406,10 @@ a {
     justify-content: center;
     text-align: center;
     padding-top: 27px;
+    @media (max-width: $r_mob_320) {
+      padding-top: 71px;
+      font-size: 62px;
+    }
   }
   &__list {
     list-style-type: none;
@@ -231,22 +420,45 @@ a {
     font-weight: bold;
     text-transform: uppercase;
     padding-left: 0;
+    @media (max-width: $r_mob_320) {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      gap: 117px;
+      font-size: 30px;
+    }
   }
+
   &__item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 25px;
-    max-width: 20px;
-    &:nth-child(1) {
-      padding-top: 14px;
-      text-align: center;
+    max-width: 25px;
+    padding-top: 15px;
+    text-align: center;
+    @media (max-width: $r_mob_320) {
+      max-width: 100%;
     }
-
-    &:nth-child(3) {
-      padding-top: 15px;
-      text-align: center;
+  }
+  &__question {
+    @media (max-width: $r_mob_320) {
+      width: 91px;
+      height: 84px;
+    }
+  }
+  &__dacia {
+    @media (max-width: $r_mob_320) {
+      width: 67px;
+      height: 84px;
+    }
+  }
+  &__contacter {
+    @media (max-width: $r_mob_320) {
+      width: 91px;
+      height: 84px;
     }
   }
 }
@@ -259,10 +471,17 @@ a {
   display: flex;
   justify-content: center;
   text-align: center;
+  @media (max-width: $r_mob_320) {
+    height: 219px;
+    font-size: 33px;
+  }
 }
 
 .promo {
   background-color: $green;
+  @media (max-width: $r_mob_320) {
+    height: 279px;
+  }
 
   &__title {
     color: $white;
@@ -273,6 +492,11 @@ a {
     padding-top: 36px;
     padding-bottom: 3px;
     margin-top: 0;
+    @media (max-width: $r_mob_320) {
+      padding: 0;
+      padding-top: 53px;
+      font-size: 39px;
+    }
   }
   &__list {
     list-style-type: none;
@@ -283,6 +507,33 @@ a {
     gap: 28px;
     padding-left: 0;
     margin-bottom: 0;
+    @media (max-width: $r_mob_320) {
+      gap: 57px;
+    }
+  }
+  &__facebook {
+    @media (max-width: $r_mob_320) {
+      width: 22px;
+      height: 39px;
+    }
+  }
+  &__twitter {
+    @media (max-width: $r_mob_320) {
+      width: 46px;
+      height: 39px;
+    }
+  }
+  &__youtube {
+    @media (max-width: $r_mob_320) {
+      width: 50px;
+      height: 35px;
+    }
+  }
+  &__instagram {
+    @media (max-width: $r_mob_320) {
+      width: 46px;
+      height: 46px;
+    }
   }
 }
 .page {
