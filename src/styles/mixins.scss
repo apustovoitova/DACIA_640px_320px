@@ -1,0 +1,10 @@
+@mixin background-common {
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include full-width;
+}
+
+@mixin full-width {
+  width: 100%;
+  max-width: 100%;
+}
