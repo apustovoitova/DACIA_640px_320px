@@ -49,18 +49,18 @@ a {
   }
 
   &__img_01 {
-    background-image: url(../images/im-usp-1_2.jpg);
-    @include background-common;
+    width: 50%;
     @media (max-width: $r_mob_320) {
-      padding-top: 15px;
       height: 560px;
+      width: 100%;
     }
   }
   &__img_02 {
+    width: 50%;
     background-image: url(../images/im-usp-2_2.jpg);
-    @include background-common;
     @media (max-width: $r_mob_320) {
       height: 560px;
+      width: 100%;
     }
   }
   &__picture {
@@ -69,14 +69,13 @@ a {
     @media (max-width: $r_mob_320) {
       height: 570px;
       @include full-width;
-      margin-bottom: 13px;
     }
   }
 
   &__section {
-    margin-left: 32px;
+    margin-left: 22px;
     @media (max-width: $r_mob_320) {
-      margin-bottom: 85px;
+      margin-bottom: 48px;
     }
   }
 
@@ -84,15 +83,21 @@ a {
     margin: 15px 35px 0 0;
     font-size: 22px;
     @media (max-width: $r_mob_320) {
-      font-size: 41px;
-      letter-spacing: 3px;
-      margin-top: 25px;
+      font-size: 42px;
+      letter-spacing: 1.5px;
+      margin-top: 21px;
+      margin-left: 5px;
+      max-width: 530px;
     }
   }
 
   &__description {
     padding-left: 5px;
     padding-right: 5px;
+    @media (max-width: $r_mob_320) {
+      padding-right: 174px;
+      letter-spacing: 0.5px;
+    }
   }
   &__box {
     text-transform: uppercase;
@@ -103,30 +108,32 @@ a {
   }
 
   &__btn {
-    margin: 28px 0 25px 20px;
+    margin: 23px 0px 6px 2px;
     @media (max-width: $r_mob_320) {
-      margin-top: 50px;
+      margin-top: 42px;
     }
   }
 
   &__btn_01 {
     margin: 28px 0 25px 20px;
     @media (max-width: $r_mob_320) {
-      margin-left: 15px;
+      margin-left: 28px;
+      margin-top: 117px;
     }
   }
   &__btn_02 {
     margin: 28px 0 25px 20px;
     @media (max-width: $r_mob_320) {
       margin-left: 35px;
-      margin-top: 50px;
+      margin-top: 169px;
     }
   }
   &__btn_03 {
     margin-top: 17px;
     margin-left: 19px;
     @media (max-width: $r_mob_320) {
-      margin-left: 21px;
+      margin-left: 44px;
+      margin-top: 59px;
     }
   }
 }
@@ -148,6 +155,7 @@ a {
 .link-primary {
   color: $white;
   font-family: $font-read;
+  font-weight: 700;
   background: $green;
   text-transform: uppercase;
   font-size: 14px;
@@ -155,7 +163,8 @@ a {
   border: none;
   @media (max-width: $r_mob_320) {
     font-size: 25px;
-    padding: 30px 68px;
+    font-weight: 700;
+    padding: 30px 70px;
     margin: 19px;
   }
 }
@@ -169,7 +178,7 @@ a {
   font-size: 11px;
   padding: 15px 87px;
   @media (max-width: $r_mob_320) {
-    font-size: 23px;
+    font-size: 27px;
     padding: 30px 171px;
   }
 }
@@ -179,8 +188,6 @@ a {
   text-align: center;
   margin-bottom: 50px;
   @media (max-width: $r_mob_320) {
-    max-width: 539px;
-    padding-left: 55px;
     margin-bottom: 92px;
   }
 
@@ -190,28 +197,40 @@ a {
     font-style: normal;
     text-transform: uppercase;
     padding-left: 0;
-
+    padding-top: 10px;
     @media (max-width: $r_mob_320) {
       font-size: 24px;
+      padding-top: 0px;
+    }
+  }
+  &__capture {
+    @media (max-width: $r_mob_320) {
+      padding-left: 45px;
+      padding-right: 45px;
     }
   }
   &__title1 {
     color: $black;
+    margin-bottom: 6px;
   }
   &__title2 {
     color: $green;
   }
+
   &__text {
     font-family: $font-read;
     font-size: 16px;
-    padding: 10px;
+    margin-top: 22px;
     color: $black;
     line-height: 20px;
     @media (max-width: $r_mob_320) {
       font-size: 32px;
       line-height: 40px;
+      max-width: 529px;
+      margin-top: 9px;
     }
   }
+
   &__copy {
     font-weight: 700;
   }
@@ -238,7 +257,7 @@ a {
   margin-bottom: 45px;
   @media (max-width: $r_mob_320) {
     height: 526px;
-    margin-top: 43px;
+    margin-top: 54px;
     margin-bottom: 64px;
   }
   &__cover-flex {
@@ -301,8 +320,8 @@ a {
     padding: 15px 33px;
     font-size: 14px;
     @media (max-width: $r_mob_320) {
-      font-size: 23px;
-      padding: 30px 67px;
+      font-size: 27px;
+      padding: 30px 73px;
     }
   }
 }
@@ -319,10 +338,9 @@ a {
   padding: 9px 18px;
   @media (max-width: $r_mob_320) {
     height: 494px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    margin-top: 64px;
   }
 
   &__beige {
@@ -367,7 +385,7 @@ a {
   margin-top: 40px;
   height: 233px;
   @media (max-width: $r_mob_320) {
-    height: 1098px;
+    height: 1089px;
   }
 
   &__title {
@@ -383,7 +401,9 @@ a {
     padding-top: 27px;
     @media (max-width: $r_mob_320) {
       padding-top: 71px;
-      font-size: 62px;
+      font-size: 57px;
+      max-width: 410px;
+      padding-left: 104px;
     }
   }
   &__list {
@@ -398,10 +418,11 @@ a {
     @media (max-width: $r_mob_320) {
       display: flex;
       flex-direction: column;
-      text-align: center;
       justify-content: center;
-      gap: 117px;
+      gap: 74px;
       font-size: 30px;
+      max-width: 261px;
+      padding-left: 300px;
     }
   }
 
@@ -415,7 +436,7 @@ a {
     padding-top: 15px;
     text-align: center;
     @media (max-width: $r_mob_320) {
-      max-width: 100%;
+      gap: 52px;
     }
   }
   &__question {
@@ -450,6 +471,15 @@ a {
     height: 219px;
     font-size: 33px;
   }
+  &__text {
+    @media (max-width: $r_mob_320) {
+      max-width: 540px;
+      display: flex;
+      justify-content: center;
+      text-align: left;
+      padding-top: 15px;
+    }
+  }
 }
 
 .promo {
@@ -469,7 +499,7 @@ a {
     margin-top: 0;
     @media (max-width: $r_mob_320) {
       padding: 0;
-      padding-top: 53px;
+      padding-top: 57px;
       font-size: 39px;
     }
   }
@@ -511,6 +541,7 @@ a {
     }
   }
 }
+
 .info {
   background-color: $beige;
   padding-top: 30px;
@@ -521,16 +552,27 @@ a {
     justify-content: center;
     gap: 30px;
     margin-bottom: 35px;
+    @media (max-width: $r_mob_320) {
+      flex-direction: column;
+      gap: 50px;
+    }
   }
   &__lead {
     font-family: $font-read;
     font-weight: 700;
     font-size: 13px;
+    @media (max-width: $r_mob_320) {
+      font-size: 25px;
+    }
   }
   &__text {
     font-family: $font-read;
     font-size: 12px;
     color: $black;
+    @media (max-width: $r_mob_320) {
+      font-size: 25px;
+      margin-top: 64px;
+    }
   }
   &__links {
     text-decoration: underline;
@@ -538,6 +580,19 @@ a {
   }
   &__tagline {
     font-weight: 700;
+  }
+
+  &__drawing {
+    @media (max-width: $r_mob_320) {
+      width: 164px;
+      height: 164px;
+    }
+  }
+  &__pic {
+    @media (max-width: $r_mob_320) {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
