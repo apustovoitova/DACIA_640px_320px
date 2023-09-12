@@ -1,0 +1,1 @@
+const modeBtn=document.querySelector(".switch-input"),mainBlock=document.querySelector(".main");modeBtn.onchange=e=>{console.log(modeBtn),!0===modeBtn.checked?(mainBlock.classList.remove("light"),mainBlock.classList.add("dark")):(mainBlock.classList.remove("dark"),mainBlock.classList.add("light"))};
